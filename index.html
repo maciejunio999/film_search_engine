@@ -2,17 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Wyszukiwarka filmów (OMDb API)</title>
+  <title>Movie Finder (OMDb API)</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Wyszukiwarka filmów (OMDb API)</h1>
 
-  <input type="text" id="movie-title" placeholder="Wpisz tytuł filmu" />
-  <button id="search-btn">Szukaj</button>
-  <button id="random-btn">Losuj film</button>
+  <div class="top-right">
+    <button id="toggle-lang" class="flag-btn" title="Change language">
+      <img id="flag-icon" src="https://flagcdn.com/gb.svg" alt="Flag" width="32" height="24">
+    </button>
 
-  <div id="movie-info" style="margin-top: 20px;"></div>
+    <label class="switch">
+      <input type="checkbox" id="theme-switch">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="container">
+    <h1 id="main-title">Wyszukiwarka filmów (OMDb API)</h1>
+
+    <div class="controls">
+      <input type="text" id="movie-title" placeholder="Wpisz tytuł filmu" />
+      <button id="search-btn">Szukaj</button>
+      <button id="random-btn">Losuj film</button>
+    </div>
+
+    <div id="movie-info" class="movie-info"></div>
+  </div>
 
   <script src="script.js"></script>
+
 </body>
 </html>
